@@ -12,7 +12,7 @@ bool ImportMesh(const string& filepath, //test
                 PolygonalMesh& mesh)
 {
 
-    /*CHECK MARKERS INCELL0*/
+    /*CHECK MARKERS IN CELL0*/
     if(!ImportCell0Ds(filepath + "/Cell0Ds.csv",
                        mesh))
     {
@@ -31,7 +31,7 @@ bool ImportMesh(const string& filepath, //test
         }
     }
 
-    /*CHECK MARKERS INCELL1*/
+    /*CHECK MARKERS IN CELL1*/
     if(!ImportCell1Ds(filepath + "/Cell1Ds.csv",
                        mesh))
     {
@@ -85,7 +85,7 @@ bool ImportMesh(const string& filepath, //test
                 }
             }
         }
-        /*CHECK IF EDGES HAVE NON-ZERO LENGTH*/
+        /*CHECK IF EDGES HAVE NON ZERO LENGTH*/
         for(unsigned int i = 0; i < mesh.NumberCell2D; i++) {
             vector<unsigned int> edges = mesh.Cell2DEdges[i];
             for(unsigned int j = 0; j < edges.size(); j++){
